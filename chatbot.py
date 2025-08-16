@@ -9,7 +9,7 @@ from langchain_core.prompts import ChatPromptTemplate ## Define chat prompt temp
 ## Load API KEY
 
 load_dotenv() ## read .env file
-os.environ["GROQ_API_KEY"] = os.getenv("Groq_API_KEY") # set groq key
+os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY") # set groq key
 
 ## streamlit App setup
 
@@ -97,3 +97,4 @@ for role, text in st.session_state.history:
         st.chat_message("user").write(text) ## User style
     else:
         st.chat_message("assistant").write(text) ## Assistant style
+
